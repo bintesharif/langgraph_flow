@@ -1,0 +1,21 @@
+[project]
+name = "flow-langgraph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=0.2.71",
+    "litellm>=1.61.3",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+flow-langgraph = "flow_langgraph:main"
+simple_flow = "flow_langgraph.simple_flow:run_simple_flow"
+promte_chaining_flow = "flow_langgraph.promte_chaining:run_promte_chaining_flow"
+router_flow = "flow_langgraph.router_flow:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
